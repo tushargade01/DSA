@@ -23,19 +23,39 @@ namespace HelloWorld
 {
 	public class Program
 	{
+	    // using for loop
+	    
+	    static int Fact1(int n){
+	        
+	        if(n==1 || n==0){
+	            return 1;
+	        }
+	        
+	        int res = 1;
+	        
+	        for(int i=2;i<=n;i++){
+	            res = res*i;
+	        }
+	        
+	        
+	        
+	        return res;
+	    }
+        
+        //using recursion
 	   
-	   static int Fact(int n){
-	       
-	       if(n==1 || n==0){
-	           return 1;
-	       }
-	       
-	       return n * Fact(n-1);
-	   }
+        static int Fact(int n){
+           
+           if(n==1 || n==0){
+               return 1;
+           }
+           
+           return n * Fact(n-1);
+        }
 	    
 		public static void Main(string[] args)
 		{
-			Console.WriteLine(Fact(0));
+			Console.WriteLine(Fact1(5));
 		}
 	}
 }
