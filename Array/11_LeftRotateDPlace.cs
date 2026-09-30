@@ -45,7 +45,8 @@ namespace HelloWorld
 	    
 	    static void LeftRotate(int[] arr, int d)
 	    {
-	        d = d % arr.Length 
+	        d = d % arr.Length; // if d is greater than array size
+	        
 	        Reverse(arr,0,d-1);
 	        Reverse(arr,d,arr.Length-1);
 	        Reverse(arr,0,arr.Length-1);
@@ -65,9 +66,9 @@ namespace HelloWorld
 	    
 		public static void Main(string[] args)
 		{
-		    int[] arr = {1, 2, 3, 4, 5};
+		    int[] arr = {7, 3, 9, 1};
 		    
-		    LeftRotate(arr,3);
+		    LeftRotate(arr,9);
 		    
 		    foreach(int element in arr)
 		    {
